@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="http://code.jquery.com/jquery-3.4.1.js"></script>
+    <title>Accessories</title>
+
+    <style>
+    * {
+        margin: 0 auto; padding: 0;
+        font-family: 'Jua', sans-serif;
+    }
+    li{ list-style: none; }
+    body {  
+      background-size: 450px;
+      background-position: right center;   
+      background-color: #f5f5dc;
+      color: rgb(0, 0, 0);
+	    display: flex;
+	    flex-direction: column;
+	    align-items: center;
+	    height: 100vh;
+    }
+    .container{
+        color: rgb(0, 0, 0);
+        display: flex;
+        flex-direction: column;
+ 
+        }
+
+    #main-header{
+        padding: 5px 5px;
+        font-size: 25px;
+    }
+
+    #main-header ul{
+      float: right;
+    }
+
+    #main-header li{
+      float: right;
+      margin-right: 30px;
+        font-size: 20px;
+    }
+    .form-signin{
+      margin-left: 500px;
+      margin-right: 500px;
+      margin-top: 120px;
+    }
+    </style>
+    <style type="text/css"> 
+      a { text-decoration:none } 
+      </style>
+  </head>
+  
+  <div id="main-header">
+    <header class="container">
+    <h1><a href="index.html">Miscellaneous Goods</a></h1>   
+       <ul>                      
+          <li><a href=login.html>login</a></li>  
+          <li><a href=case.html>case</a></li>
+          <li><a href=pouch.html>pouch/bag</a></li>                 
+      </ul>                   
+    </header>
+</div> 
+
+    <main class="form-signin">
+    <form>
+    <h1 class="login">Log in</h1>
+
+    <div class="form-floating">
+      <input class="form-control" id="userid" placeholder="ID">
+      <label for="userid">ID</label>
+    </div>
+    <div class="form-floating">
+      <input class="form-control" id="userassword" placeholder="Password">
+      <label for="userpassword">Password</label>
+    </div>
+
+    <div class="checkbox mb-3">
+      <label>
+        <input type="checkbox" value="remember-me"> Remember me
+      </label>
+    </div>
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+  </form>
+  <script>
+        $(document).ready(function(){
+          $('form').submit(function(event){
+            var value = $('input').val();
+
+            if(value==""){
+              alert("로그인 실패");
+            }
+          })
+        })
+      </script>  
+</main>
+  </body>
+</html>
